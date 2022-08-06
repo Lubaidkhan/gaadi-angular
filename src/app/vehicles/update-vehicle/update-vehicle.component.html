@@ -1,0 +1,46 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Update Vehicle</mat-card-title>
+      </mat-card-header>
+      <form class="example-form">
+        <mat-card-content>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Name" [(ngModel)]="vehicle.name" name="name" >
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Brand" [(ngModel)]="vehicle.brand" name="brand">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Model" [(ngModel)]="vehicle.model" name="model">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Make" [(ngModel)]="vehicle.make" name="make">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Power" [(ngModel)]="vehicle.power" name="power">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Seats" [(ngModel)]="vehicle.seats" name="seats">
+          </mat-form-field>
+          <!-- <mat-form-field class="example-full-width">
+            <input matInput placeholder="Image_Url" [(ngModel)]="vehicle.Image_Url" name="Image_Url">
+          </mat-form-field> -->
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Carriage Price" [(ngModel)]="vehicle.carriage_price" name="carriage_price">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Carriage Price Discount" [(ngModel)]="vehicle.carriage_price_Discount" name="carriage_price_Discount">
+          </mat-form-field>
+          
+        </mat-card-content>
+        <button mat-stroked-button color="primary" class="btn-block" (click)="updateVehicle()">Update</button>
+      </form>
+    </mat-card>
+  </div>
+
+
+

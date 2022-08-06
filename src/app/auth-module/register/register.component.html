@@ -1,0 +1,38 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>SignUp</mat-card-title>
+    </mat-card-header>
+    <form class="signupform" #signupform="ngForm">
+      <mat-card-content>
+
+        <mat-form-field class="example-full-width">
+          <input class="form-group" matInput placeholder="Name"  class="form-control" #name="ngModel" [(ngModel)]="user.name"
+            type="text" name="name" required>
+
+          
+        </mat-form-field>
+        <div *ngIf="name.errors?.['required']">
+          Name is required.
+        </div>
+        <mat-form-field class="example-full-width">
+          <input  class="form-group" matInput placeholder="Email" class="form-control" [(ngModel)]="user.email" type="text" name="email" #email="ngModel" required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input class="form-group" matInput placeholder="Password" [(ngModel)]="user.password" type="password"  name="password" #password="ngModel"required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input class="form-group" matInput placeholder="ConfirmPassword" [(ngModel)]="user.confirmPassword" type="password" name="confirmPassword" #confirmPassword="ngModel" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input class="form-group" matInput placeholder="Role" [(ngModel)]="user.role_name" type="text" name="role_name" #role_Name="ngModel" required>
+        </mat-form-field>
+
+      </mat-card-content>
+      <button mat-stroked-button color="accent" class="btn-block" [disabled]="!signupform.form.valid"
+        (click)="adduser(user)">Create</button>
+    </form>
+  </mat-card>
+</div>

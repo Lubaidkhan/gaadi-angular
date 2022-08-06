@@ -1,0 +1,45 @@
+<!-- <p>update-user works!</p> -->
+
+<!-- <form #loginForm="ngForm">
+    <div class="main">
+      <div class="input-fields">
+        <input name="name" ngModel placeholder="Name" id="name" type="text" class="input-field" />
+      </div>
+      <div class="input-fields">
+        <input name="age" ngModel placeholder="Age" id="age" type="number" class="input-field" />
+      </div>
+      <button>Update Data </button>
+    </div>
+  </form> -->
+  <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Edit User </mat-card-title>
+      </mat-card-header>
+      <form class="example-form">
+        <mat-card-content>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Name" [(ngModel)]="user.name" name="name">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email" [(ngModel)]="user.email" name="email">
+          </mat-form-field>
+          <!-- <mat-form-field class="example-full-width">
+            <input matInput placeholder="Password" [(ngModel)]="user.password" name="password">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="ConfirmPassword" [(ngModel)]="user.confirmPassword" name="password">
+          </mat-form-field> -->
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Role" [(ngModel)]="user.role_name" name="role_name">
+          </mat-form-field>
+          
+        </mat-card-content>
+        <button mat-stroked-button color="accent" class="btn-block" (click)="updateUser()">Update User</button>
+      </form>
+    </mat-card>
+  </div>
+
